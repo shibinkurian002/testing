@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Hello Page - Custom Style</title>
+    <title>Animated Hello Page - Full Header</title>
     <style>
+        html, body { /* Ensure html and body take full width and height */
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
         .header.finisher-header {
             width: 100%;
             height: 300px;
+            display: block; /* Ensure it behaves as a block element */
+            box-sizing: border-box; /* Include padding/border in width/height */
+            overflow: hidden; /* Clip any potential overflow */
         }
         .hello-text {
             font-size: 3em;
